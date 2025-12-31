@@ -2,6 +2,10 @@ const express = require("express");
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("This is the home route");
+});
+
 app.get("/about", (req, res) => {
   res.send("This is the about route");
 });
@@ -12,10 +16,6 @@ app.get("/blog", (req, res) => {
 
 app.get("/contact", (req, res) => {
   res.send("This is the contact route");
-});
-
-app.get("/", (req, res) => {
-  res.send("This is the home route");
 });
 
 app.listen(3000, () => {
